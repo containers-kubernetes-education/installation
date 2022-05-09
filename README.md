@@ -14,10 +14,10 @@ If you are using a Mac, it should be as simple as:
 // install the podman CLI
 brew install podman
 
-// Define a podman VM called machine
+// Define a podman VM (the default)
 podman machine init
 
-// Start up the container vm
+// Start up the default vm
 podman machine start
 ```
 
