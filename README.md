@@ -9,6 +9,18 @@ The main requirement for this session is some form of container runtime. There a
 ### Podman
 The instruction of how to install Podman can be found here: https://podman.io/getting-started/installation
 
+If you are using a Mac, it should be as simple as:
+```
+// install the podman CLI
+brew install podman
+
+// Define a podman VM called machine
+podman machine init
+
+// Start up the container vm
+podman machine start
+```
+
 Note that if you are using a Windows machine, you will need to install into WSL2, and use something like a Ubuntu distro. (https://www.microsoft.com/store/productId/9MTTCL66CPXJ). In my testing on my Windows PC, I also had to install qemu into the ubuntu image to get podman working correctly (`sudo apt-get install qemu-system`)
 
 Make sure you can bring up a container using this command (We will revisit what this is exactly doing in the session):
@@ -27,9 +39,9 @@ docker run -p 8765:80 nginxdemos/hello
 ```
 
 ### Golang (Optional)
-The demo I will be using will be written in Golang, and if you wish to edit or work with the demo after the session you will need to install go, and setup your go path. You can find the go binaries here: https://go.dev/dl/
+The demo I will be using will be written in Golang, and if you wish to edit or work with the demo after the session you will need to install go, and setup your go path. You can find the go binaries here: https://go.dev/dl/. However I do show in the education how to compile the application using a contianer without having golang installed in the session
 
-I will be providing compiled binaries in the demo repositories so you can still run the demo with golang installed, but you wont be able to rebuild them without.
+I will also be providing compiled binaries in the demo repositories so you can still run the demo with golang installed, but you wont be able to rebuild them without.
 
 ## Session 2
 
