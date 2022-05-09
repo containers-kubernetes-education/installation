@@ -4,10 +4,10 @@ The purpose of this repository is to provide some instruction of all the prerequ
 
 ## Session 1
 
-The main requirement for this session is some form of container runtime. There are a number available (docker, podman, containerd, etc) but for these sessions I will be concentrating on Podman, due to the freely available license even within businesses. Podman and Docker actually follow very closely in terms of commands and structure, so if you already have docker installed and would prefer to use it, it will be very simple to switch between the two.
+The main requirement for this session is some form of container runtime. There are a number available (Docker, Podman, Containerd, etc) but for these sessions I will be concentrating on Podman, due to the freely available license even within businesses. Podman and Docker actually follow very closely in terms of commands and structure, so if you already have Docker installed and would prefer to use it, it will be very simple to switch between the two.
 
 ### Podman
-The instruction of how to install podman can be found here: https://podman.io/getting-started/installation
+The instruction of how to install Podman can be found here: https://podman.io/getting-started/installation
 
 Note that if you are using a Windows machine, you will need to install into WSL2, and use something like a Ubuntu distro. (https://www.microsoft.com/store/productId/9MTTCL66CPXJ). In my testing on my Windows PC, I also had to install qemu into the ubuntu image to get podman working correctly (`sudo apt-get install qemu-system`)
 
@@ -16,7 +16,7 @@ Make sure you can bring up a container using this command (We will revisit what 
 // This will ask which location to download from, choose docker.io 
 podman run -p 8765:80 nginxdemos/hello
 ```
-This is leave a process running on the terminal, but goto http://localhost:8765/ and make sure you can see NGINX page. If not, contact me and I can help you resolve this.
+This leaves a process running on the terminal, but goto http://localhost:8765/ and make sure you can see NGINX page. If not, contact me (James Davies on Slack) and I can help you resolve this.
 
 ### Docker (Instead of Podman)
 If you have permission to use docker and you would rather use that. You can download Docker-Desktop here: https://www.docker.com/products/docker-desktop/
@@ -27,7 +27,7 @@ docker run -p 8765:80 nginxdemos/hello
 ```
 
 ### Golang (Optional)
-The demo i will be using will be written in golang, and if you wish to edit or work with the demo after the session you will need to install go, and setup your go path. You can find the go binaries here: https://go.dev/dl/
+The demo I will be using will be written in Golang, and if you wish to edit or work with the demo after the session you will need to install go, and setup your go path. You can find the go binaries here: https://go.dev/dl/
 
 I will be providing compiled binaries in the demo repositories so you can still run the demo with golang installed, but you wont be able to rebuild them without.
 
